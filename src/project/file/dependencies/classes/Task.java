@@ -44,6 +44,7 @@ public final class Task {
 		}
 		
 		public TaskBuilder setTaskNumber(int taskNumber){
+			//No need for a defensive copy here.
 			validateTaskNumber(taskNumber);
 			this.taskNumber = taskNumber;
 			return this;
@@ -62,5 +63,34 @@ public final class Task {
 		
 		
 	}
+	
+	@Override
+	public String toString(){
+		return "Task: " + taskNumber;		
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + taskNumber;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Task other = (Task) obj;
+		if (taskNumber != other.taskNumber)
+			return false;
+		return true;
+	}
+	
+	
 
 }
