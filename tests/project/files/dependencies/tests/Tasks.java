@@ -1,6 +1,7 @@
 package project.files.dependencies.tests;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -25,6 +26,12 @@ public class Tasks {
 		int higherIndex = 101;
 		new TaskBuilder(higherIndex).build().getTaskNumber();
 	}
-	
+	@Test
+	public void testEquality(){
+		int value = 1;
+		assertTrue(new TaskBuilder(value).build().equals( 
+				new TaskBuilder(value).build()
+				));
+	}
 
 }
