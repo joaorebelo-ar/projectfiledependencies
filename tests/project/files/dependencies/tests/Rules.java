@@ -1,7 +1,6 @@
 package project.files.dependencies.tests;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 import java.util.Arrays;
 import java.util.List;
@@ -47,6 +46,7 @@ public class Rules {
 	
 	@Test(expected=IllegalStateException.class)
 	public void testRuleSizeDifference(){
+		//Exception here
 		Rule r = new RuleBuilder(target,secondListOfDependents.size(),firstListOfDependents).build();
 		assertEquals(target,r.getTarget());
 		assertEquals(firstListOfDependents.size(), r.getNumberOfDependents());

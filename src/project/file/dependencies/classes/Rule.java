@@ -72,6 +72,10 @@ public final class Rule {
 				+ "]";
 	}
 
+	public boolean hasDependencies(){
+		return !dependents.isEmpty();
+	}
+	
 	private Rule(RuleBuilder b){
 		this.target = b.target;
 		this.numberOfDependents = b.numberOfDependents;
