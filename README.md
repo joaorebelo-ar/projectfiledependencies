@@ -26,7 +26,7 @@ To avoid ambiguity in the output, tasks that do not depend on each other should 
 
 ## Example
 
-__Input: __
+__Input:__
 
 __5 4__
 
