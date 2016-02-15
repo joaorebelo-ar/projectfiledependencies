@@ -9,7 +9,7 @@ import project.file.dependencies.classes.Rule.RuleBuilder;
 import project.file.dependencies.classes.Task;
 import project.file.dependencies.interfaces.InputFacade;
 
-public class InputFacadeImplementation implements InputFacade {
+public final class InputFacadeImplementation implements InputFacade {
 
 	private final List<Task> tasks;
 	private final List<Rule> rulesWithDependencies;
